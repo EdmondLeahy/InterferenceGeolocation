@@ -34,8 +34,8 @@ plt.ylim(-15, 15)
 
 plt.figure(2)
 plt.plot(f, PythonFFT)
-plt.plot(f, Corroutput)
-plt.legend(['FFT', 'Correlation Process'])
+#plt.plot(f, Corroutput)
+#plt.legend(['FFT', 'Correlation Process'])
 plt.xlabel('Frequency (Hz)')
 
 plt.show()
