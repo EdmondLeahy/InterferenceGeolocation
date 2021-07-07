@@ -155,17 +155,23 @@ def make_pandas_arrays(list_obs):
 def get_epoch_set(lst_data_obs, all_viewed=False):
     sets = []
     for obs_df in lst_data_obs:
-        s_new  = list(obs_df['Second'].unique())
-        w_new  = list(obs_df['Week'].unique())
+        s_new  = list(obs_df['Second'])
+        w_new  = list(obs_df['Week'])
         eps = [Epoch(e[0], e[1]) for e in list(zip(w_new, s_new))]
-        sets.append(eps)
+        sets.append(set(eps))
 
     if all_viewed:
         result = set(sets[0]).intersection(*sets)
     else:
-        result = set(sets[0]).union(*sets)
+        result = list(set(sets[0]).union(*sets))
 
     return result
+
+def calc_tdoa_obs(obs_dfs):
+
+
+
+
 
 
 def main():
@@ -178,7 +184,10 @@ def main():
     obs_dfs = make_pandas_arrays(obs_arrays)
     # get all the epochs that are found in the first file
     epochs = get_epoch_set(obs_dfs)
-    print(f'found {len(epochs)} epochs in the first file')
+    print(f'found {len(epochs)} epochs total in the file')
+
+    # Process all epochs
+
 
 if __name__ == '__main__':
     sys.exit(main())
