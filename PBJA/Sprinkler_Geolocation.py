@@ -12,10 +12,14 @@ import matplotlib.pyplot as plt
 from scipy import signal
 import pandas as pd
 
+#Local imports
+from Sprinkler_LeastSquares import SprinklerLS
+
 class Epoch:
     def __init__(self, week, second):
         self.week = week
         self.second = second
+
     def __eq__(self, eq_class):
         return self.week == eq_class.week and self.second == eq_class.second
 
@@ -24,6 +28,20 @@ class Epoch:
 
     def __repr__(self):
         return f'{self.week}:{self.second}'
+
+    def __lt__(self, other):
+        if self.week < other.week:
+            return True
+        elif self.week > other.week:
+            return False
+        elif self.second < other.second:
+            return True
+        else:
+            return False
+
+    def __gt__(self, other):
+        return False if self < other else True
+
 
 def get_obs_from_files(obs_filenames, start_loc=1, max_size=10000):
     """
@@ -111,7 +129,7 @@ def get_corr_axis(corr_array):
     return x
 
 
-def get_corr_offset(log1, log2, epoch):
+def get_corr_offset(df1, df2):
     """
         Find the value of the correlation at the peak of the correlation spike (normalized to max value). The real portion of the correlation
         is used here, as the imaginary value is to do with power of the correlated signal and is not useful.
@@ -119,25 +137,23 @@ def get_corr_offset(log1, log2, epoch):
         Todo: Find reference for this
 
     """
-    rx_epoch_obs = []
-    corr_epoch = epoch
-    for rx_file in [log1, log2]:
-        epoch_series = []
-        for log in rx_file:
-            if get_epoch_from_log(log) == corr_epoch:
-                epoch_series.extend(get_series_from_log(log))
-        rx_epoch_obs.append(epoch_series)
+    rx1_obs = complexify([obs for data in df1['Data'].to_list() for obs in data])
+    rx2_obs = complexify([obs for data in df2['Data'].to_list() for obs in data])
 
-    complex_rx_series = []
-    for series in rx_epoch_obs:
-        complex_rx_series.append(complexify(series))
-
-    corr = fft_ccor(complex_rx_series[0], complex_rx_series[1])
+    corr = fft_ccor(rx1_obs, rx2_obs)
     corr.real /= np.max(abs(corr.real))
     x = get_corr_axis(corr)
     max_shift = x[np.argmax(corr.real)]
     #     print(f'Location of max: {max_shift}')
-    return abs(corr.real), x
+    return max_shift, abs(corr.real), x
+
+
+def check_for_corr(corr_series, thresh=7):
+    """ Simple function to check if a correlation was found """
+    base = np.mean(corr_series)
+    spike_max = np.max(corr_series)
+    return (spike_max / base)>thresh
+
 
 def make_pandas_arrays(list_obs):
     pd_obs = []
@@ -164,15 +180,50 @@ def get_epoch_set(lst_data_obs, all_viewed=False):
         result = set(sets[0]).intersection(*sets)
     else:
         result = list(set(sets[0]).union(*sets))
-
+    result.sort()
     return result
 
-def calc_tdoa_obs(obs_dfs):
+def filter_for_timesteered(obs_dfs):
+    filtered_dfs = []
+    for df in obs_dfs:
+        # filtered_dfs.append(df[df['Second'] == epoch.second & df['Week'] == epoch.week])
+        pass
 
+def filter_for_epoch(obs_dfs_full, epoch):
+    filtered_dfs = []
+    for df in obs_dfs_full:
+        f1 = df['Second'] == epoch.second
+        f2 = df['Week'] == epoch.week
+        filtered_dfs.append(df[f1 & f2])
 
+    return filtered_dfs
 
+def create_combination_obs(epoch_obs):
+    num_obs = len(epoch_obs)
+    obs = []
+    for i, rxs in enumerate(epoch_obs):
+        for j in range(i, num_obs):
+            if i != j:
+                corr_offset = get_corr_offset(epoch_obs[i], epoch_obs[j])
+                new_obs = [i, j, corr_offset[0], check_for_corr(corr_offset[1])]
+                obs.append(new_obs)
+                if new_obs[3]:
+                    pass
+    return obs
 
+def calc_tdoa_obs(epochs, obs_dfs):
+    detected_obs = []
+    for epoch in epochs:
+        epoch_obs = filter_for_epoch(obs_dfs, epoch)
+        tdoa_obs = create_combination_obs(epoch_obs)
+        if all([t[3] for t in tdoa_obs]):
+            # print(f'{tdoa_obs}')
+            detected_obs.append(tdoa_obs)
 
+    epoch_ls = SprinklerLS(detected_obs, obs_dfs)
+
+    print(f'The number of epochs with found corr spikes: {len(detected_obs)}')
+    return detected_obs
 
 def main():
     # Find all the filenames in the directory that end with .csv
@@ -182,9 +233,11 @@ def main():
     print(f'found {len(obs_filenames)} observation files')
     obs_arrays = get_obs_from_files(obs_filenames)
     obs_dfs = make_pandas_arrays(obs_arrays)
+    # obs_dfs_filtered =
     # get all the epochs that are found in the first file
     epochs = get_epoch_set(obs_dfs)
     print(f'found {len(epochs)} epochs total in the file')
+    tdoa_obs = calc_tdoa_obs(epochs, obs_dfs)
 
     # Process all epochs
 
