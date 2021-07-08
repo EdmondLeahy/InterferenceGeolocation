@@ -22,7 +22,7 @@ class SprinklerLS:
 
     def create_a_row(self, r1_ind, r2_ind):
         """
-        A = (x-a/rB1 - x-d/rB2), (y-b/rB1 - x-3/rB2), (z-c/rB1 - x-f/rB2)
+        A = (x-a/rB1 - x-d/rB2), (y-b/rB1 - x-3/rB2)
         """
         row = []
         for i in range(self.dimensions):
