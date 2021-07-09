@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+import np
 
 POS_FILENAME = 'BESTPOS'
 SPKL_FILENAME = 'SPRINKLERDATA'
