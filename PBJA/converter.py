@@ -4,6 +4,58 @@ import pandas as pd
 POS_FILENAME = 'BESTPOS'
 SPKL_FILENAME = 'SPRINKLERDATA'
 
+
+def ecef_to_enu(ecef, geodetic_0):
+    """ECEF to ENU
+
+    Convert ECEF x, y, z to ENU e, n, u about geodetic_0 lat_0, long_0, height_0.
+
+    height_0 must be ellipsoidal height.
+
+    Args:
+        ecef (list of float): ECEF coordinate in form [x, y, z]
+        geodetic_0 (list of float): Geodetic coordinate in
+            form [lat_0, long_0, height_0] about which to calculate ENU
+
+    Returns:
+        (tuple of float): ENU w.r.t geodetic_0 in
+            form (easting, northing, up)
+
+    STOLEN FROM NOVATEL_COORDINATES.TRANSFORMATIONS!
+
+    """
+
+    x = ecef[0]
+    y = ecef[1]
+    z = ecef[2]
+
+    lat0 = geodetic_0[0]
+    lon0 = geodetic_0[1]
+
+    lam = np.radians(lat0)  # Latitude in Radians
+    phi = np.radians(lon0)  # Longitude in Radians
+
+    sin_lambda = np.sin(lam)
+    cos_lambda = np.cos(lam)
+    cos_phi = np.cos(phi)
+    sin_phi = np.sin(phi)
+
+    ecef_0 = geodetic_to_ecef(geodetic_0)
+    xd = x - ecef_0[0]
+    yd = y - ecef_0[1]
+    zd = z - ecef_0[2]
+
+    n = -cos_phi * sin_lambda * xd - sin_lambda * sin_phi * yd + cos_lambda * zd
+    e = -sin_phi * xd + cos_phi * yd
+    u = cos_lambda * cos_phi * xd + cos_lambda * sin_phi * yd + sin_lambda * zd
+
+    # account for Pandas series, and np float typecasting
+    e = float(e) if type(e) == np.float64 else e
+    n = float(n) if type(n) == np.float64 else n
+    u = float(u) if type(u) == np.float64 else u
+
+    return e, n, u
+
 def make_obs_arrays(pos_log_filename, sprinkler_log_filename):
     with open(pos_log_filename) as bestpos_file:
         bestpos_data = bestpos_file.readlines()
