@@ -56,6 +56,11 @@ def ecef_to_enu(ecef, geodetic_0):
 
     return e, n, u
 
+
+def convert_to_ENU(row, expansion):
+    enu = geodetic_to_enu(expansion, (float(row['Lat']), float(row['Long']), float(row['Height'])))
+    return enu
+
 def make_obs_arrays(pos_log_filename, sprinkler_log_filename):
     with open(pos_log_filename) as bestpos_file:
         bestpos_data = bestpos_file.readlines()
