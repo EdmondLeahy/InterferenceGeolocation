@@ -37,27 +37,31 @@ def add_ENU(merged_df, expansion):
 
     return merged_df
 
+
 def run_nconvert(filename):
-    pass
+    raise NotImplementedError('Need to spawn Nconvert here')
+
 
 def parse_imput_files(filepath):
-
-    for filename in os.listdir(filepath):
-        if '.GPS' not in filename:
-            continue
-
-        # Run nconvert to split
-        run_nconvert(filename)
-
-        # Check for pos file:
+    obs_arrays = []
+    for filename in [f for f in os.listdir(filepath) if '.GPS' in f]:
         pos_ascii_file = filename + '.' + POS_FILENAME
-        if not os.path.exists(pos_ascii_file):
-            raise UserWarning(f'No {POS_FILENAME} file found. Is it in the dataset?')
-
-        # Check for pos file:
         spkl_ascii_file = filename + '.' + SPKL_FILENAME
-        if not os.path.exists(spkl_ascii_file):
-            raise UserWarning(f'No {SPKL_FILENAME} file found. Is it in the dataset?')
+        base_name = os.path.basename(filename).replace('.GPS', '')
 
-        make_obs_arrays(pos_ascii_file, spkl_ascii_file)
+        # check if need to run nconvert:
+        if not os.path.exists(pos_ascii_file) or not os.path.exists(spkl_ascii_file):
+            # Run nconvert to split
+            run_nconvert(filename)
 
+            # Check for pos file:
+            if not os.path.exists(pos_ascii_file):
+                raise UserWarning(f'No {POS_FILENAME} file found. Is it in the dataset?')
+
+            # Check for pos file:
+            if not os.path.exists(spkl_ascii_file):
+                raise UserWarning(f'No {SPKL_FILENAME} file found. Is it in the dataset?')
+
+        obs_arrays.append(make_obs_arrays(pos_ascii_file, spkl_ascii_file))
+
+    return obs_arrays
