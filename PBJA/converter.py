@@ -1,12 +1,15 @@
 import os
 import pandas as pd
-import np
+import numpy as np
+import logging
 
 POS_FILENAME = 'BESTPOS'
 SPKL_FILENAME = 'SPRINKLERDATA'
 
 ELLIPSE_A = 6378137.0
 ELLIPSE_E_SQ = 0.0066943799901413165
+
+_logger = logging.getLogger(__name__)
 
 
 def ecef_to_enu(ecef, geodetic_0):
@@ -129,35 +132,59 @@ def convert_to_enu(row, expansion):
     return enu
 
 
+def get_series_from_log(log):
+    """ Function to return a series from an individual sprinkler log """
+    series = [int(dat) for dat in log[12:-1]]
+    return series
+
+
 def make_obs_arrays(pos_log_filename, sprinkler_log_filename):
     with open(pos_log_filename) as bestpos_file:
+        _logger.info(f'Reading {pos_log_filename}')
         bestpos_data = bestpos_file.readlines()
 
     with open(sprinkler_log_filename) as sprinkler_file:
+        _logger.info(f'Reading {sprinkler_log_filename}')
         sprinkler_data = sprinkler_file.readlines()
 
     pre_df_bestpos_data = [n.split(',') for n in bestpos_data]
     pre_df_sprinkler_data = [n.split(',') for n in sprinkler_data]
 
-    bestpos_df = pd.DataFrame(pre_df_bestpos_data)
-    sprinkler_df = pd.DataFrame(pre_df_sprinkler_data)
+    # sprinkler processing
+    _logger.info('Processing sprinkler data')
+    arr_heads = [[t[5], t[6], t[11]] for t in pre_df_sprinkler_data]
+    payload = [get_series_from_log(t) for t in pre_df_sprinkler_data]
+    sprinkler_df = pd.DataFrame(arr_heads)
+    sprinkler_df = sprinkler_df.apply(pd.to_numeric)
+    sprinkler_df.columns = ['Week', 'Second', 'NumObs']
+    sprinkler_df['Data'] = payload
+    sprinkler_df = sprinkler_df.set_index('Second')
 
+    # Bestpos processing
+    _logger.info('Processing position data')
+    bestpos_df = pd.DataFrame(pre_df_bestpos_data)
     pos_df = bestpos_df[[5, 6, 11, 12, 13]]
     pos_df.columns = ['Week', 'GPSTime', 'Lat', 'Long', 'Height']
+    pos_df = pos_df.apply(pd.to_numeric)
     pos_df = pos_df.set_index('GPSTime')
 
-    sprklr_df = sprinkler_df.drop([0, 1, 2, 3, 4, 7, 8, 9, 1035], axis=1)
-    sprklr_df = sprklr_df.set_index(6)
+    # sprklr_df = sprinkler_df.drop([0, 1, 2, 3, 4, 7, 8, 9, 1035], axis=1)
 
-    merged_df = pd.merge(pos_df, sprklr_df, left_index=True, right_index=True)
+    # sprklr_df = sprklr_df.set_index(6)
 
-    expansion = [float(merged_df['Lat'][0]),
-                 float(merged_df['Long'][0]),
-                 float(merged_df['Height'][0])]
+    _logger.info('Merging position and sprinkler data')
+    merged_df = pd.merge(pos_df, sprinkler_df, left_index=True, right_index=True)
 
+    expansion = [float(merged_df['Lat'].iloc[0]),
+                 float(merged_df['Long'].iloc[0]),
+                 float(merged_df['Height'].iloc[0])]
+
+    _logger.info('Adding ENU data')
     enu_added_df = add_enu(merged_df, expansion)
 
-    return enu_added_df
+    ret_df = enu_added_df.reset_index().rename(columns={'index': 'Second', 'Week_y': 'Week'}).drop('Week_x', axis=1)
+
+    return ret_df[['Second', 'Week', 'Lat', 'Long', 'Height',  'NumObs', 'Data', 'E', 'N', 'U']]  # Just to reorder
 
 
 def add_enu(merged_df, expansion):
@@ -174,25 +201,22 @@ def run_nconvert(filename):
 
 
 def parse_input_files(filepath):
+    sprinkler_files = []
+    pos_files = []
+
     obs_arrays = []
-    for filename in [f for f in os.listdir(filepath) if '.GPS' in f]:
-        pos_ascii_file = filename + '.' + POS_FILENAME
-        spkl_ascii_file = filename + '.' + SPKL_FILENAME
-        # base_name = os.path.basename(filename).replace('.GPS', '')
+    for filename in set([f for f in os.listdir(filepath) if '.GPS' in f]):
 
-        # check if need to run nconvert:
-        if not os.path.exists(pos_ascii_file) or not os.path.exists(spkl_ascii_file):
-            # Run nconvert to split
-            run_nconvert(filename)
+        if POS_FILENAME in filename:
+            pos_files.append(filename)
+        elif SPKL_FILENAME in filename:
+            sprinkler_files.append(filename)
 
-            # Check for pos file:
-            if not os.path.exists(pos_ascii_file):
-                raise UserWarning(f'No {POS_FILENAME} file found. Is it in the dataset?')
+    for sp_dat_file in sprinkler_files:
 
-            # Check for pos file:
-            if not os.path.exists(spkl_ascii_file):
-                raise UserWarning(f'No {SPKL_FILENAME} file found. Is it in the dataset?')
-
-        obs_arrays.append(make_obs_arrays(pos_ascii_file, spkl_ascii_file))
+        pos_dat_file = [f for f in pos_files if sp_dat_file.split('.')[0] in f][0]
+        full_sp_file_path = os.path.join(filepath, sp_dat_file)
+        full_pos_file_path = os.path.join(filepath, pos_dat_file)
+        obs_arrays.append(make_obs_arrays(full_pos_file_path, full_sp_file_path))
 
     return obs_arrays

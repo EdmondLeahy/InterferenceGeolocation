@@ -18,7 +18,7 @@ from Sprinkler_LeastSquares import SprinklerLS
 from converter import parse_input_files
 
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
 _logger = logging.getLogger('PHJA_logger')
 # _logger.setLevel(logging.DEBUG)
 
@@ -69,10 +69,7 @@ def get_obs_from_files(obs_filenames, start_loc=1, max_size=10000):
     return obs_arrays
 
 
-def get_series_from_log(log):
-    """ Function to return a series from an individual sprinkler log """
-    series = [int(dat) for dat in log[8:-4]]
-    return series
+
 
 
 def get_all_epoch_in_logs(logs):
@@ -168,20 +165,6 @@ def check_for_corr(corr_series, thresh=7):
     return (spike_max / base) > thresh
 
 
-def make_pandas_arrays(list_obs):
-    pd_obs = []
-    for obs in list_obs:
-        arr_heads = [t[:8] for t in obs]
-        payload = [get_series_from_log(t) for t in obs]
-        obs_df = pd.DataFrame(arr_heads)
-        obs_df = obs_df.apply(pd.to_numeric)
-        obs_df['Data'] = payload
-        obs_df.columns = ['Second', 'Week', 'Lat', 'Lon', 'Height', 'DataLen', 'Samples', 'AlsoLen', 'Data']
-        # Todo: Get actual names for this
-        pd_obs.append(obs_df)
-    return pd_obs
-
-
 def get_epoch_set(lst_data_obs, all_viewed=False):
     sets = []
     for obs_df in lst_data_obs:
@@ -245,18 +228,14 @@ def calc_tdoa_obs(epochs, obs_dfs):
 
 
 def main(args):
-    # Find all the filenames in the directory that end with .csv
-    # file_loc = f"/home/edmond/Documents/Projects/Sandbox/DataSandbox/Observations/"
-    # file_loc = f"/mnt/BigSlowBoi/DOCUMENTS/Projects/InterferenceGeolocation/Sprinkler/Data/Observations"
-    file_loc = args.filepath
-    obs_filenames = [os.path.join(file_loc, f) for f in os.listdir(file_loc) if f.endswith('.csv')]
-    _logger.info(f'found {len(obs_filenames)} observation files')
-    obs_dfs = parse_input_files(obs_filenames)
+    obs_dfs = parse_input_files(args.filepath)
     # obs_dfs_filtered =
-    # get all the epochs that are found in the first file
+    # get all the epochs that are common to both files
     epochs = get_epoch_set(obs_dfs)
     _logger.info(f'found {len(epochs)} epochs total in the file')
+    _logger.info(f'Running TDOA on epochs')
     tdoa_obs = calc_tdoa_obs(epochs, obs_dfs)
+    _logger.info('Processing complete')
 
     # Process all epochs
 
