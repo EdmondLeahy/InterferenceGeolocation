@@ -15,6 +15,9 @@ import pandas as pd
 
 # Local imports
 from Sprinkler_LeastSquares import SprinklerLS
+from converter import parse_input_files
+
+
 logging.basicConfig(level=logging.DEBUG)
 _logger = logging.getLogger('PHJA_logger')
 # _logger.setLevel(logging.DEBUG)
@@ -240,18 +243,6 @@ def calc_tdoa_obs(epochs, obs_dfs):
     _logger.info(f'The number of epochs with found corr spikes: {len(detected_obs)}')
     return detected_obs
 
-def collect_sprinkler_data(filename):
-    obs_arrays = get_obs_from_files(obs_filenames)
-    obs_dfs = make_pandas_arrays(obs_arrays)
-
-def ingest_data(input_filenames):
-
-    for fn in input_filenames:
-        pass
-
-
-    return None
-
 
 def main(args):
     # Find all the filenames in the directory that end with .csv
@@ -260,7 +251,7 @@ def main(args):
     file_loc = args.filepath
     obs_filenames = [os.path.join(file_loc, f) for f in os.listdir(file_loc) if f.endswith('.csv')]
     _logger.info(f'found {len(obs_filenames)} observation files')
-    obs_df = ingest_data(obs_filenames)
+    obs_dfs = parse_input_files(obs_filenames)
     # obs_dfs_filtered =
     # get all the epochs that are found in the first file
     epochs = get_epoch_set(obs_dfs)
