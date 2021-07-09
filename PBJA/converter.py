@@ -5,6 +5,9 @@ import np
 POS_FILENAME = 'BESTPOS'
 SPKL_FILENAME = 'SPRINKLERDATA'
 
+ELLIPSE_A = 1
+ELLIPSE_E_SQ = 1
+
 
 def ecef_to_enu(ecef, geodetic_0):
     """ECEF to ENU
@@ -58,14 +61,14 @@ def ecef_to_enu(ecef, geodetic_0):
     return e, n, u
 
 
-def geodetic_to_ecef(geodetic, datum=DATUMS['WGS84']):
+def geodetic_to_ecef(geodetic):
     """Geodetic to ECEF. Convert Geodetic lat, long, height to ECEF x, y ,z.
 
     Note: Height must be ellipsoidal height
 
     Args:
         geodetic (list of float): Geodetic coordinate in form [lat, long, height]
-        datum (:obj:`Datum`): Datum(ellipsoid) to use for conversion constants (defaults to WGS84)
+
 
     Returns:
         (tuple of float): ECEF coordinate in form (x, y, z)
@@ -81,7 +84,7 @@ def geodetic_to_ecef(geodetic, datum=DATUMS['WGS84']):
     lam = np.radians(lat)  # Latitude in Radians
     phi = np.radians(lon)  # Longitude in Radians
     s = np.sin(lam)
-    n = datum.ellipsoid.a / np.sqrt(1 - datum.ellipsoid.e_sq * s * s)
+    n = ELLIPSE_A / np.sqrt(1 - ELLIPSE_E_SQ * s * s)
 
     sin_lambda = np.sin(lam)
     cos_lambda = np.cos(lam)
@@ -90,12 +93,12 @@ def geodetic_to_ecef(geodetic, datum=DATUMS['WGS84']):
 
     x = (h + n) * cos_lambda * cos_phi
     y = (h + n) * cos_lambda * sin_phi
-    z = (h + (1 - datum.ellipsoid.e_sq) * n) * sin_lambda
+    z = (h + (1 - ELLIPSE_E_SQ) * n) * sin_lambda
 
     return x, y, z
 
 
-def geodetic_to_enu(geodetic, geodetic_0, datum=DATUMS['WGS84']):
+def geodetic_to_enu(geodetic, geodetic_0):
     """Geodetic To ENU
 
     Convert Geodetic lat, long, height to ENU e, n, u about geodetic_0 lat_0, long_0, height_0.
@@ -106,7 +109,6 @@ def geodetic_to_enu(geodetic, geodetic_0, datum=DATUMS['WGS84']):
         geodetic (list of float): Geodetic coordinate in form [lat, long, height]
         geodetic_0 (list of float): Geodetic coordinate in
             form [lat_0, long_0, height_0] about which to calculate ENU
-        datum (:obj:`Datum`): Datum(ellipsoid) to use for conversion constants (defaults to WGS84)
 
     Returns:
         (tuple of float): ENU w.r.t geodetic_0 in
@@ -117,12 +119,12 @@ def geodetic_to_enu(geodetic, geodetic_0, datum=DATUMS['WGS84']):
 
 
     """
-    ecef = geodetic_to_ecef(geodetic, datum=datum)
+    ecef = geodetic_to_ecef(geodetic)
     enu = ecef_to_enu(list(ecef), geodetic_0)
     return enu
 
 
-def convert_to_ENU(row, expansion):
+def convert_to_enu(row, expansion):
     enu = geodetic_to_enu([float(row['Lat']), float(row['Long']), float(row['Height'])], expansion)
     return enu
 
@@ -153,16 +155,16 @@ def make_obs_arrays(pos_log_filename, sprinkler_log_filename):
                  float(merged_df['Long'][0]),
                  float(merged_df['Height'][0])]
 
-    enu_added_df = add_ENU(merged_df, expansion)
+    enu_added_df = add_enu(merged_df, expansion)
 
     return enu_added_df
 
 
-def add_ENU(merged_df, expansion):
+def add_enu(merged_df, expansion):
     # Convert to ENU
-    merged_df['E'] = merged_df.apply(lambda row: convert_to_ENU(row, expansion)[0], axis=1)
-    merged_df['N'] = merged_df.apply(lambda row: convert_to_ENU(row, expansion)[1], axis=1)
-    merged_df['U'] = merged_df.apply(lambda row: convert_to_ENU(row, expansion)[2], axis=1)
+    merged_df['E'] = merged_df.apply(lambda row: convert_to_enu(row, expansion)[0], axis=1)
+    merged_df['N'] = merged_df.apply(lambda row: convert_to_enu(row, expansion)[1], axis=1)
+    merged_df['U'] = merged_df.apply(lambda row: convert_to_enu(row, expansion)[2], axis=1)
 
     return merged_df
 
@@ -170,12 +172,13 @@ def add_ENU(merged_df, expansion):
 def run_nconvert(filename):
     raise NotImplementedError('Need to spawn Nconvert here')
 
+
 def parse_input_files(filepath):
     obs_arrays = []
     for filename in [f for f in os.listdir(filepath) if '.GPS' in f]:
         pos_ascii_file = filename + '.' + POS_FILENAME
         spkl_ascii_file = filename + '.' + SPKL_FILENAME
-        base_name = os.path.basename(filename).replace('.GPS', '')
+        # base_name = os.path.basename(filename).replace('.GPS', '')
 
         # check if need to run nconvert:
         if not os.path.exists(pos_ascii_file) or not os.path.exists(spkl_ascii_file):
