@@ -138,7 +138,7 @@ def get_series_from_log(log):
     return series
 
 
-def make_obs_arrays(pos_log_filename, sprinkler_log_filename):
+def make_obs_arrays(pos_log_filename, sprinkler_log_filename, fine_filt=True, pos_filt_status=None):
     with open(pos_log_filename) as bestpos_file:
         _logger.info(f'Reading {pos_log_filename}')
         bestpos_data = bestpos_file.readlines()
@@ -163,6 +163,13 @@ def make_obs_arrays(pos_log_filename, sprinkler_log_filename):
     # Bestpos processing
     _logger.info('Processing position data')
     bestpos_df = pd.DataFrame(pre_df_bestpos_data)
+    if fine_filt:
+        bestpos_df = bestpos_df[bestpos_df[4] == 'FINESTEERING']
+    if pos_filt_status:
+        bestpos_df = bestpos_df[bestpos_df[10] == pos_filt_status]
+    else:
+        bestpos_df = bestpos_df[bestpos_df[10] != 'UNKNOWN']
+
     pos_df = bestpos_df[[5, 6, 11, 12, 13]]
     pos_df.columns = ['Week', 'GPSTime', 'Lat', 'Long', 'Height']
     pos_df = pos_df.apply(pd.to_numeric)
@@ -196,10 +203,6 @@ def add_enu(merged_df, expansion):
     return merged_df
 
 
-def run_nconvert(filename):
-    raise NotImplementedError('Need to spawn Nconvert here')
-
-
 def parse_input_files(filepath):
     sprinkler_files = []
     pos_files = []
@@ -211,6 +214,10 @@ def parse_input_files(filepath):
             pos_files.append(filename)
         elif SPKL_FILENAME in filename:
             sprinkler_files.append(filename)
+
+    if len(sprinkler_files) == 0 or len(pos_files) == 0:
+        raise UserWarning('Cant find the observation files. Please use Nconvert to split the files, and ensure that the'
+                          'BESTPOS and SPRINKLERDATA files are in the given folder.')
 
     for sp_dat_file in sprinkler_files:
 

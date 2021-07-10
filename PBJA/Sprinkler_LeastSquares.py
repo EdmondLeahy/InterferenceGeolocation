@@ -1,6 +1,14 @@
 
-
+from enum import Enum
 import numpy as np
+
+
+class ReturnCodes(Enum):
+    SOL_COMPUTED = 1
+    MAX_ITERATION_REACHED = 2
+    INSUFFICIENT_OBS = -1
+    NON_INVERTABLE_MATRIX = -2
+
 
 
 def dist(p1, p2):
@@ -35,7 +43,10 @@ class SprinklerLS:
 
     def iterate(self):
 
-        for i in range(15):
+        if len(self.pdoa_obs) < 3:
+            return ReturnCodes.INSUFFICIENT_OBS
+
+        for i in range(self.max_iter):
 
             a_mat_list = []
             w_list = []
@@ -48,7 +59,11 @@ class SprinklerLS:
             w = np.array(w_list)
             N = np.matmul(np.transpose(A), A)
             U = np.matmul(np.transpose(A), w)
-            delta = np.matmul(np.linalg.inv(N), U)
+            try:
+                delta = np.matmul(np.linalg.inv(N), U)
+            except np.linalg.LinAlgError:
+                return ReturnCodes.NON_INVERTABLE_MATRIX
+
             self.x0 = self.x0 + delta
 
             self.deltas.append(delta)
@@ -56,3 +71,5 @@ class SprinklerLS:
             if all([d < self.thresh for d in delta]):
                 break
 
+        if i == self.max_iter:
+            return ReturnCodes.MAX_ITERATION_REACHED

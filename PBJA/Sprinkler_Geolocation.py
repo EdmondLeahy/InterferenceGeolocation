@@ -49,54 +49,54 @@ class Epoch:
     def __gt__(self, other):
         return False if self < other else True
 
-
-def get_obs_from_files(obs_filenames, start_loc=1, max_size=10000):
-    """
-    Function for retrieving the sprinkler observations from the file given. Places each parsed log in to a list
-    Args:
-        obs_filenames (list of str): List of filenames to parse.
-        start_loc (int): The start location to parse. Use if you want to skip the start of the file for some reason
-        max_size (int): The end location to parse. Use to limit size, or to stop before the end of file.
-    """
-    obs_arrays = []
-    for obs_filename in obs_filenames:
-        with open(obs_filename, 'r+') as datafile:
-            _logger.info(f'Reading {obs_filename}...')
-            raw_sprinkles = datafile.readlines()
-            _logger.info('Done')
-        spkrlr_data = [log.split(',') for log in raw_sprinkles[start_loc:start_loc+max_size]]
-        obs_arrays.append(spkrlr_data)
-    return obs_arrays
-
-
+#
+# def get_obs_from_files(obs_filenames, start_loc=1, max_size=10000):
+#     """
+#     Function for retrieving the sprinkler observations from the file given. Places each parsed log in to a list
+#     Args:
+#         obs_filenames (list of str): List of filenames to parse.
+#         start_loc (int): The start location to parse. Use if you want to skip the start of the file for some reason
+#         max_size (int): The end location to parse. Use to limit size, or to stop before the end of file.
+#     """
+#     obs_arrays = []
+#     for obs_filename in obs_filenames:
+#         with open(obs_filename, 'r+') as datafile:
+#             _logger.info(f'Reading {obs_filename}...')
+#             raw_sprinkles = datafile.readlines()
+#             _logger.info('Done')
+#         spkrlr_data = [log.split(',') for log in raw_sprinkles[start_loc:start_loc+max_size]]
+#         obs_arrays.append(spkrlr_data)
+#     return obs_arrays
 
 
 
-def get_all_epoch_in_logs(logs):
-    """Function to return all the unique epochs present in the logs """
-    epochs = []
-    for log in logs:
-        epoch = get_epoch_from_log(log)
-        if epoch not in epochs:
-            epochs.append(epoch)
 
-    return epochs
+#
+# def get_all_epoch_in_logs(logs):
+#     """Function to return all the unique epochs present in the logs """
+#     epochs = []
+#     for log in logs:
+#         epoch = get_epoch_from_log(log)
+#         if epoch not in epochs:
+#             epochs.append(epoch)
+#
+#     return epochs
+
+#
+# def get_pos_from_log(log):
+#     """ Simple function to extrac the location from a log """
+#     pos_e = float(log[-3])
+#     pos_n = float(log[-2])
+#     pos_u = float(log[-1])
+#     return pos_e, pos_n, pos_u
 
 
-def get_pos_from_log(log):
-    """ Simple function to extrac the location from a log """
-    pos_e = float(log[-3])
-    pos_n = float(log[-2])
-    pos_u = float(log[-1])
-    return pos_e, pos_n, pos_u
-
-
-def get_epoch_from_log(log):
-    """ Simple function to extract the epoch of a specific log """
-    epoch_week = float(log[0])
-    epoch_second = float(log[1])
-    ep = Epoch(epoch_week, epoch_second)
-    return ep
+# def get_epoch_from_log(log):
+#     """ Simple function to extract the epoch of a specific log """
+#     epoch_week = float(log[0])
+#     epoch_second = float(log[1])
+#     ep = Epoch(epoch_week, epoch_second)
+#     return ep
 
 
 def complexify(sig):
@@ -179,13 +179,6 @@ def get_epoch_set(lst_data_obs, all_viewed=False):
         result = list(set(sets[0]).union(*sets))
     result.sort()
     return result
-
-
-def filter_for_timesteering(obs_dfs):
-    filtered_dfs = []
-    for df in obs_dfs:
-        # filtered_dfs.append(df[df['Second'] == epoch.second & df['Week'] == epoch.week])
-        pass
 
 
 def filter_for_epoch(obs_dfs_full, epoch):
