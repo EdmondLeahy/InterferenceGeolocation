@@ -96,28 +96,19 @@ def get_corr_offset(df1, df2):
     return max_ind, abs(corr), x
 
 
-def check_for_corr(corr_series, thresh=7):
-    """ Simple function to check if a correlation was found """
+def check_for_corr(corr_series, thresh=5):
+    """ Simple function to check if a correlation was found
+        The paper suggest a ratio of 3 or higher. Safe with 5
+    """
     base = np.mean(corr_series)
     spike_max = np.max(corr_series)
     return (spike_max / base) > thresh
-
-
-def find_descriminator_corr_values(corr_offset, corr_series):
-
-    prompt = corr_series[corr_offset]
-    early = corr_series[corr_offset - 1]
-    late = corr_series[corr_offset + 1]
-
-
 
 
 def apply_descriminator(early, prompt, late, ts=1):
     """
         Descriminator function that interpolates between three correlation values to find the interpolated maximum
         correlation.
-
-
 
     """
     # Handle if early is higher than late

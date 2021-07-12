@@ -25,8 +25,9 @@ class SprinklerLS:
         self.dimensions = dimensions
         self.max_iter = max_iter
         self.deltas = []
-        self.x0s = [self.x0]
+        self.est_xs = [self.x0]
         self.thresh = thresh
+        self.est_x = None
 
     def create_a_row(self, r1_ind, r2_ind):
         """
@@ -42,7 +43,7 @@ class SprinklerLS:
         return dist(self.rover_pos[r1_ind], self.x0) - dist(self.rover_pos[r2_ind], self.x0)
 
     def iterate(self):
-
+        self.est_x = self.x0
         if len(self.pdoa_obs) < 3:
             return ReturnCodes.INSUFFICIENT_OBS
 
@@ -64,10 +65,10 @@ class SprinklerLS:
             except np.linalg.LinAlgError:
                 return ReturnCodes.NON_INVERTABLE_MATRIX
 
-            self.x0 = self.x0 + delta
+            self.est_x = self.est_x + delta
 
             self.deltas.append(delta)
-            self.x0s.append(self.x0)
+            self.est_xs.append(self.est_x)
             if all([d < self.thresh for d in delta]):
                 break
 

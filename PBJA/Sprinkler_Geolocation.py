@@ -2,6 +2,7 @@ import time
 import argparse
 import sys
 import logging
+# from progress import bar
 
 # Python Package Imports
 import os
@@ -20,9 +21,11 @@ from sprinkler_functions import *
 
 
 logging.basicConfig(level=logging.INFO)
-_logger = logging.getLogger('PHJA_logger')
+_logger = logging.getLogger('PBJA_logger')
 # _logger.setLevel(logging.DEBUG)
 
+SPEED_OF_LIGHT = 299792458
+SAMPLE_RATE = 12000000 # SPS according to the Paper
 
 def get_epoch_set(lst_data_obs, all_viewed=False):
     sets = []
@@ -64,7 +67,8 @@ def create_combination_obs(epoch_obs):
                     early = (corr_axis[max_corr_ind - 1], corr_series[max_corr_ind - 1])
                     late = (corr_axis[max_corr_ind + 1], corr_series[max_corr_ind + 1])
                     corr_offset, corr_val = apply_descriminator(early, prompt, late)
-                    new_obs = [i, j, corr_offset, check]
+                    dist_offset = (corr_offset / SPEED_OF_LIGHT) * SAMPLE_RATE
+                    new_obs = [i, j, dist_offset, check]
                     obs.append(new_obs)
     return obs
 
@@ -73,6 +77,7 @@ def make_roverpos_for_ls(obs_df):
 
 def calc_tdoa_obs(epochs, obs_dfs):
     detected_obs = []
+    est_epochs = []
     # Find all epochs with correlation candidates
     for epoch in epochs:
         epoch_obs = filter_for_epoch(obs_dfs, epoch)
@@ -81,10 +86,13 @@ def calc_tdoa_obs(epochs, obs_dfs):
             # _logger.info(f'{tdoa_obs}')
             detected_obs.append(tdoa_obs)
 
-            epoch_ls = SprinklerLS(detected_obs, obs_dfs)
+            epoch_ls = SprinklerLS(tdoa_obs, obs_dfs)
 
-    _logger.info(f'The number of epochs with found corr spikes: {len(detected_obs)}')
-    return detected_obs
+            ret_code = epoch_ls.iterate()
+            _logger.info(f'{epoch} returned {ret_code}')
+            est_epochs.append((epoch, epoch_ls.est_x, ret_code))
+
+    return est_epochs
 
 
 def main(args):
