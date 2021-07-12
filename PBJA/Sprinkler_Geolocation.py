@@ -56,19 +56,20 @@ def create_combination_obs(epoch_obs):
     for i, rxs in enumerate(epoch_obs):
         for j in range(i, num_obs):
             if i != j:
-                corr_offset, corr_series, corr_axis = get_corr_offset(epoch_obs[i], epoch_obs[j])
+                max_corr_ind, corr_series, corr_axis = get_corr_offset(epoch_obs[i], epoch_obs[j])
                 check = check_for_corr(corr_series)
                 if check:
                     # Apply descriminator
-                    prompt = corr_series[corr_offset]
-                    early = corr_series[corr_offset - 1]
-                    late = corr_series[corr_offset + 1]
-                    corr_val, corr_offset = apply_descriminator(early, prompt, late)
-                new_obs = [i, j, corr_offset, check]
-
-                obs.append(new_obs)
+                    prompt = (corr_axis[max_corr_ind], corr_series[max_corr_ind])
+                    early = (corr_axis[max_corr_ind - 1], corr_series[max_corr_ind - 1])
+                    late = (corr_axis[max_corr_ind + 1], corr_series[max_corr_ind + 1])
+                    corr_offset, corr_val = apply_descriminator(early, prompt, late)
+                    new_obs = [i, j, corr_offset, check]
+                    obs.append(new_obs)
     return obs
 
+def make_roverpos_for_ls(obs_df):
+    pass
 
 def calc_tdoa_obs(epochs, obs_dfs):
     detected_obs = []
@@ -80,14 +81,14 @@ def calc_tdoa_obs(epochs, obs_dfs):
             # _logger.info(f'{tdoa_obs}')
             detected_obs.append(tdoa_obs)
 
-    epoch_ls = SprinklerLS(detected_obs, obs_dfs)
+            epoch_ls = SprinklerLS(detected_obs, obs_dfs)
 
     _logger.info(f'The number of epochs with found corr spikes: {len(detected_obs)}')
     return detected_obs
 
 
 def main(args):
-    obs_dfs = parse_input_files(args.filepath)
+    obs_dfs = parse_input_files(args.filepath, expansion=args.source_location)
     # obs_dfs_filtered =
     # get all the epochs that are common to both files
     epochs = get_epoch_set(obs_dfs)
@@ -103,6 +104,8 @@ def get_args():
     pbja_args = argparse.ArgumentParser()
     pbja_args.add_argument('-f', '--filepath', default=os.getcwd(),
                            help='Filepath to location of observations. Defaults to CWD')
+    pbja_args.add_argument('-sl', '--source_location', default=None, nargs=3, type=float,
+                           help='Location of the interference source, if known')
 
     return pbja_args.parse_args()
 

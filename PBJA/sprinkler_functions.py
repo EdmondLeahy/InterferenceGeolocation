@@ -88,12 +88,12 @@ def get_corr_offset(df1, df2):
     rx1_obs = complexify([obs for data in df1['Data'].to_list() for obs in data])
     rx2_obs = complexify([obs for data in df2['Data'].to_list() for obs in data])
 
-    corr = fft_ccor(rx1_obs, rx2_obs)
-    corr.real /= np.max(abs(corr.real))
+    corr = abs(fft_ccor(rx1_obs, rx2_obs).real)
+    corr /= np.max(corr)
     x = get_corr_axis(corr)
-    max_shift = x[np.argmax(corr.real)]
+    max_ind = np.argmax(corr)
     #     _logger.info(f'Location of max: {max_shift}')
-    return max_shift, abs(corr.real), x
+    return max_ind, abs(corr), x
 
 
 def check_for_corr(corr_series, thresh=7):

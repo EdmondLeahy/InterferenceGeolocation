@@ -51,7 +51,7 @@ class SprinklerLS:
             a_mat_list = []
             w_list = []
             for obs in self.pdoa_obs:
-                a_mat_list.append(self.create_a_row(obs[0], obs[0]))
+                a_mat_list.append(self.create_a_row(obs[0], obs[1]))
                 fx = self.create_fx(obs[0], obs[1])
                 w_list.append(fx - obs[2])
 

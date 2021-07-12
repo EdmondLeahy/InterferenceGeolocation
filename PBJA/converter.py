@@ -138,7 +138,7 @@ def get_series_from_log(log):
     return series
 
 
-def make_obs_arrays(pos_log_filename, sprinkler_log_filename, fine_filt=True, pos_filt_status=None):
+def make_obs_arrays(pos_log_filename, sprinkler_log_filename, expansion, fine_filt=True, pos_filt_status=None):
     with open(pos_log_filename) as bestpos_file:
         _logger.info(f'Reading {pos_log_filename}')
         bestpos_data = bestpos_file.readlines()
@@ -182,9 +182,10 @@ def make_obs_arrays(pos_log_filename, sprinkler_log_filename, fine_filt=True, po
     _logger.info('Merging position and sprinkler data')
     merged_df = pd.merge(pos_df, sprinkler_df, left_index=True, right_index=True)
 
-    expansion = [float(merged_df['Lat'].iloc[0]),
-                 float(merged_df['Long'].iloc[0]),
-                 float(merged_df['Height'].iloc[0])]
+    if not expansion:
+        expansion = [float(merged_df['Lat'].iloc[0]),
+                     float(merged_df['Long'].iloc[0]),
+                     float(merged_df['Height'].iloc[0])]
 
     _logger.info('Adding ENU data')
     enu_added_df = add_enu(merged_df, expansion)
@@ -203,7 +204,7 @@ def add_enu(merged_df, expansion):
     return merged_df
 
 
-def parse_input_files(filepath):
+def parse_input_files(filepath, expansion=None):
     sprinkler_files = []
     pos_files = []
 
@@ -224,6 +225,12 @@ def parse_input_files(filepath):
         pos_dat_file = [f for f in pos_files if sp_dat_file.split('.')[0] in f][0]
         full_sp_file_path = os.path.join(filepath, sp_dat_file)
         full_pos_file_path = os.path.join(filepath, pos_dat_file)
-        obs_arrays.append(make_obs_arrays(full_pos_file_path, full_sp_file_path))
+        spr_obs = make_obs_arrays(full_pos_file_path, full_sp_file_path, expansion)
+        obs_arrays.append(spr_obs)
+        # if expansion is non, set to first epoch pos (arbitrary)
+        if not expansion:
+            expansion = [float(spr_obs['Lat'].iloc[0]),
+                         float(spr_obs['Long'].iloc[0]),
+                         float(spr_obs['Height'].iloc[0])]
 
     return obs_arrays
