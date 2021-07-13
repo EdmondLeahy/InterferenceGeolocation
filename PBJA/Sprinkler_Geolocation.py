@@ -25,7 +25,8 @@ _logger = logging.getLogger('PBJA_logger')
 # _logger.setLevel(logging.DEBUG)
 
 SPEED_OF_LIGHT = 299792458
-SAMPLE_RATE = 12000000 # SPS according to the Paper
+SAMPLE_RATE = 12000000  # SPS according to the Paper
+
 
 def get_epoch_set(lst_data_obs, all_viewed=False):
     sets = []
@@ -67,15 +68,14 @@ def create_combination_obs(epoch_obs):
                     early = (corr_axis[max_corr_ind - 1], corr_series[max_corr_ind - 1])
                     late = (corr_axis[max_corr_ind + 1], corr_series[max_corr_ind + 1])
                     corr_offset, corr_val = apply_descriminator(early, prompt, late)
+                    # Convert from samples to meters
                     dist_offset = (corr_offset / SPEED_OF_LIGHT) * SAMPLE_RATE
                     new_obs = [i, j, dist_offset, check]
                     obs.append(new_obs)
     return obs
 
-def make_roverpos_for_ls(obs_df):
-    pass
 
-def calc_tdoa_obs(epochs, obs_dfs):
+def calc_tdoa_obs(epochs, obs_dfs, poi=None):
     detected_obs = []
     est_epochs = []
     # Find all epochs with correlation candidates
@@ -86,7 +86,7 @@ def calc_tdoa_obs(epochs, obs_dfs):
             # _logger.info(f'{tdoa_obs}')
             detected_obs.append(tdoa_obs)
 
-            epoch_ls = SprinklerLS(tdoa_obs, obs_dfs)
+            epoch_ls = SprinklerLS(tdoa_obs, obs_dfs, x0=poi)
 
             ret_code = epoch_ls.iterate()
             _logger.info(f'{epoch} returned {ret_code}')
@@ -113,7 +113,8 @@ def get_args():
     pbja_args.add_argument('-f', '--filepath', default=os.getcwd(),
                            help='Filepath to location of observations. Defaults to CWD')
     pbja_args.add_argument('-sl', '--source_location', default=None, nargs=3, type=float,
-                           help='Location of the interference source, if known')
+                           help='Location of the interference source, if known. Also used for point of expansion '
+                                'in both ENU calc and LS calc')
 
     return pbja_args.parse_args()
 

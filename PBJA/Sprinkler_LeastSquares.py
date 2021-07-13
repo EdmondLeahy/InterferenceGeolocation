@@ -18,10 +18,10 @@ def dist(p1, p2):
 
 class SprinklerLS:
 
-    def __init__(self, obs, rover_pos, x0=[0, 0], dimensions=2, max_iter=10, thresh=1e-5):
+    def __init__(self, obs, rover_pos, x0=None, dimensions=2, max_iter=10, thresh=1e-5):
         self.pdoa_obs = obs
         self.rover_pos = rover_pos
-        self.x0 = np.array(x0)
+        self.x0 = np.array(x0[:2]) if x0 else np.array([0, 0])
         self.dimensions = dimensions
         self.max_iter = max_iter
         self.deltas = []
