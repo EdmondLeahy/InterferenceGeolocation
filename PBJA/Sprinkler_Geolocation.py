@@ -2,7 +2,7 @@ import time
 import argparse
 import sys
 import logging
-# from progress import bar
+# from progress.bar import IncrementalBar as ProgressBar
 
 # Python Package Imports
 import os
@@ -57,6 +57,10 @@ def filter_for_epoch(obs_dfs_full, epoch):
 def create_combination_obs(epoch_obs):
     num_obs = len(epoch_obs)
     obs = []
+
+    # epoch_prog = ProgressBar('\rProcessing Epochs', max=len(epoch_obs), file=None)
+    # epoch_prog.file = sys.stderr
+
     for i, rxs in enumerate(epoch_obs):
         for j in range(i, num_obs):
             if i != j:
@@ -72,6 +76,9 @@ def create_combination_obs(epoch_obs):
                     dist_offset = (corr_offset / SPEED_OF_LIGHT) * SAMPLE_RATE
                     new_obs = [i, j, dist_offset, check]
                     obs.append(new_obs)
+    #     epoch_prog.next()
+    # epoch_prog.finish()
+
     return obs
 
 
