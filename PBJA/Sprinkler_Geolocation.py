@@ -2,7 +2,7 @@ import time
 import argparse
 import sys
 import logging
-# from progress import bar
+# from progress.bar import IncrementalBar as ProgressBar
 
 # Python Package Imports
 import os
@@ -58,6 +58,10 @@ def create_combination_obs(epoch_obs):
     num_obs = len(epoch_obs)
     obs = []
     stations = []
+
+    # epoch_prog = ProgressBar('\rProcessing Epochs', max=len(epoch_obs), file=None)
+    # epoch_prog.file = sys.stderr
+
     for i, rxs in enumerate(epoch_obs):
         for j in range(i, num_obs):
             if i != j:
@@ -74,6 +78,8 @@ def create_combination_obs(epoch_obs):
                     new_obs = [i, j, dist_offset, check]
                     obs.append(new_obs)
         stations.append((epoch_obs[i]['E'].unique()[0], epoch_obs[i]['N'].unique()[0], epoch_obs[i]['U'].unique()[0]))
+    #     epoch_prog.next()
+    # epoch_prog.finish()
     return obs, stations
 
 
