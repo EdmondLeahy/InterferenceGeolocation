@@ -15,7 +15,7 @@ from scipy import signal
 import pandas as pd
 
 # Local imports
-from Sprinkler_LeastSquares import SprinklerLS
+from Sprinkler_LeastSquares import SprinklerLS, ReturnCodes
 from converter import parse_input_files
 from sprinkler_functions import *
 
@@ -57,6 +57,7 @@ def filter_for_epoch(obs_dfs_full, epoch):
 def create_combination_obs(epoch_obs):
     num_obs = len(epoch_obs)
     obs = []
+    stations = []
     for i, rxs in enumerate(epoch_obs):
         for j in range(i, num_obs):
             if i != j:
@@ -72,7 +73,8 @@ def create_combination_obs(epoch_obs):
                     dist_offset = (corr_offset / SPEED_OF_LIGHT) * SAMPLE_RATE
                     new_obs = [i, j, dist_offset, check]
                     obs.append(new_obs)
-    return obs
+        stations.append((epoch_obs[i]['E'].unique()[0], epoch_obs[i]['N'].unique()[0], epoch_obs[i]['U'].unique()[0]))
+    return obs, stations
 
 
 def calc_tdoa_obs(epochs, obs_dfs, poi=None):
@@ -81,18 +83,28 @@ def calc_tdoa_obs(epochs, obs_dfs, poi=None):
     # Find all epochs with correlation candidates
     for epoch in epochs:
         epoch_obs = filter_for_epoch(obs_dfs, epoch)
-        tdoa_obs = create_combination_obs(epoch_obs)
+        tdoa_obs, tdoa_stations = create_combination_obs(epoch_obs)
         if all([t[3] for t in tdoa_obs]):
-            # _logger.info(f'{tdoa_obs}')
+            _logger.info(f'{epoch} has {len(tdoa_obs)} observations')
             detected_obs.append(tdoa_obs)
 
-            epoch_ls = SprinklerLS(tdoa_obs, obs_dfs, x0=poi)
+            epoch_ls = SprinklerLS(tdoa_obs, tdoa_stations, x0=poi)
 
             ret_code = epoch_ls.iterate()
             _logger.info(f'{epoch} returned {ret_code}')
             est_epochs.append((epoch, epoch_ls.est_x, ret_code))
 
     return est_epochs
+
+
+def plot_results(estimated_res, truth_pos=None):
+    plt.figure()
+    # plot the truth, if available
+    if truth_pos:
+        plt.scatter(truth_pos[0], truth_pos[1], marker="*")
+    for epoch in [e for e in estimated_res if e[2] == ReturnCodes.SOL_COMPUTED]:
+        plt.scatter(epoch[1][0], epoch[1][1])
+    plt.show()
 
 
 def main(args):
@@ -104,8 +116,7 @@ def main(args):
     _logger.info(f'Running TDOA on epochs')
     tdoa_obs = calc_tdoa_obs(epochs, obs_dfs)
     _logger.info('Processing complete')
-
-    # Process all epochs
+    plot_results(tdoa_obs, truth_pos=args.source_location)
 
 
 def get_args():

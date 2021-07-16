@@ -74,3 +74,5 @@ class SprinklerLS:
 
         if i == self.max_iter:
             return ReturnCodes.MAX_ITERATION_REACHED
+
+        return ReturnCodes.SOL_COMPUTED
