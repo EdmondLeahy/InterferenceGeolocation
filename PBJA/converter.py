@@ -209,7 +209,7 @@ def parse_input_files(filepath, expansion=None):
     pos_files = []
 
     obs_arrays = []
-    for filename in set([f for f in os.listdir(filepath) if '.GPS' in f]):
+    for filename in set([f for f in os.listdir(filepath) if '.GPS' in f or '.gps' in f]):
 
         if POS_FILENAME in filename:
             pos_files.append(filename)
