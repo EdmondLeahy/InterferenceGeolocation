@@ -1,0 +1,57 @@
+
+global int iDUTCom1 = 1  ; COM 1 (test input/output)
+
+;----------------------------------------------------------------
+; start of main
+;
+; Input parameters
+;  INT com1 - main com port of DUT
+
+
+Main  int com1_ string sInt_band__
+
+   iDUTCom1 = com1_
+
+   int iBaudRate = 460800
+   
+   find com%iDUTCom1% %iBaudRate% DUT_config noappend
+   resynctime
+
+   send * "FRESET\r"
+   pause 20
+
+   find com%iDUTCom1% %iBaudRate% DUT_config noappend
+   ;resynctime
+   
+   sendportprompt DUT_config "ITDETECTCONFIG %sInt_band_%\r"
+   sendportprompt DUT_config "ITENABLEDETECTIONMASK %sInt_band_% DISABLE\r"
+   sendportprompt DUT_config "ITINTERFERENCEDETECT %sInt_band_% 50 16K 1 8\r"
+   sendportprompt DUT_config "ITSPECTRALANALYSIS PREDECIMATION GPS%sInt_band_% 200 1K 10 1\r"
+   sendportprompt DUT_config "SPRINKLERCONFIG CHAN0 ENABLE GPS%sInt_band_% POSTDECIMATION 32768 1000 0\r"
+ 
+   sendportprompt DUT_config "FILECONFIG OPEN\r"
+   sendportprompt DUT_config "FILEROTATECONFIG 24 4096 OVERWRITE\r"
+   sendportprompt DUT_config "FILEAUTOTRANSFER COPY\r"
+   sendportprompt DUT_config "LOG FILE RAWEPHEM ONNEW\r"
+   sendportprompt DUT_config "LOG FILE GLORAWEPHEM ONNEW\r"
+   sendportprompt DUT_config "LOG FILE GALINAVEPHEMERIS ONNEW\r"
+   sendportprompt DUT_config "LOG FILE BDSEPHEMERIS ONNEW\r"
+   sendportprompt DUT_config "LOG FILE RXSTATUSB ONCHANGED\r"
+   sendportprompt DUT_config "LOG FILE BESTPOSB ONTIME 1\r"
+   sendportprompt DUT_config "LOG FILE RANGEB ONTIME 1\r"
+   sendportprompt DUT_config "LOG FILE ITFRONTENDDATAB ONTIME 1\r"
+   sendportprompt DUT_config "LOG FILE ITDETECTSTATUSB ONCHANGED\r"
+   sendportprompt DUT_config "LOG FILE ITPSDFINALB ONNEW\r"
+   sendportprompt DUT_config "LOG FILE ITDETECTDEBUGB ONNEW\r"
+   sendportprompt DUT_config "LOG FILE SKCALIBRATESTATUSB ONNEW\r"
+   sendportprompt DUT_config "LOG FILE SKCOMPLETECALIBRATESTATUSB ONNEW\r"
+   sendportprompt DUT_config "LOG FILE SKPOWERSTATUSB ONNEW\r"
+   sendportprompt DUT_config "LOG FILE SKPRNSTATUSB ONNEW\r"
+   
+   ; Save the configuration
+   sendportprompt DUT_config "SAVECONFIG"
+   
+   
+
+End
+; end of Main

@@ -1,0 +1,2921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>NovAtel Sprinkler Results</name>
+    <open>1</open>
+    <description>NovAtel Sprinkler Results</description>
+    <Style id="yellowDotIcon">
+      <IconStyle>
+        <color>
+          ffffff00
+        </color>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+        </Icon>      </IconStyle>
+    </Style>
+    <Style id="blueDotIcon">
+      <IconStyle>
+        <color>
+          ffff0000
+        </color>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+        </Icon>      </IconStyle>
+    </Style>
+    <Style id="redDotIcon">
+      <IconStyle>
+        <color>
+          FF1400F0
+        </color>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+        </Icon>      </IconStyle>
+    </Style>
+    <Folder>
+      <name>TruthPosition</name>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#yellowDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434460864,51.15028763264,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>EstimatedPositions</name>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0343478246406,51.150014924990344,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03420315726667,51.150316138903456,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03420008261514,51.150100206982074,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03418249892846,51.15008787259613,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434942424373,51.15027093152831,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03403862872403,51.15067937122016,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03419812845867,51.15030328784279,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03407028100058,51.15009307222543,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0342051762542,51.15006388206062,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03406577753752,51.149975915038866,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434862196518,51.150265339248485,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03429605365456,51.150141094230435,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.034321029586,51.15013271948137,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435607851982,51.150207268514315,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03455074710433,51.15053212516013,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03417895094965,51.15053498183178,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03432942464163,51.150155700694896,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03437490576941,51.15013433874113,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03447256251101,51.14954126833746,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03474244762083,51.14954158863357,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03433143276473,51.15020693023248,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03436068892218,51.15026476127879,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03433689823801,51.150251801348375,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434750409932,51.15025262148289,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435220093543,51.15026202923989,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03416269186579,51.15003382341359,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.034349181431,51.15024603747965,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435570512418,51.150252162046,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03433580426955,51.15023360015371,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0342941566219,51.15000775061482,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03510434237673,51.150038681900064,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.034444873668,51.150491283162225,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03430117378615,51.15003565372236,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03412443888575,51.150015231769366,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435149053867,51.150268845052224,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435711919352,51.150278520945896,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03398028490878,51.15013228654348,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03444806028719,51.150496455141464,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03440114614183,51.1503445986919,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03438227405839,51.150288199756965,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0343309628841,51.15025110942283,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435721990019,51.15027380753002,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434306612453,51.15022672859999,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03432341999927,51.150227772678825,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434063560368,51.15026092739655,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434303916588,51.15028763066271,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03432647178546,51.150192758632585,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03432787533738,51.15020691036946,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03432587711004,51.150220047611754,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434487282587,51.15025918998369,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03410361049161,51.15012759015048,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03412274206822,51.15013545752811,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434975002979,51.150276975667424,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03423472771385,51.15007859657641,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03436688596574,51.150287853824786,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03436215456348,51.15027543465435,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03429686883248,51.15013384213722,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0343684318879,51.15029390478123,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0342227519055,51.150183553050994,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03421774261184,51.150070431293976,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434979490156,51.150275903840104,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03425632060551,51.150076490861764,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03421908877148,51.150032097575526,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434367192571,51.15025093563397,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435093494687,51.150271713966234,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435372537774,51.15025877996419,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03421528939187,51.150187176673974,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03448780343388,51.15053259129982,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434961010949,51.15026445856623,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03454970636837,51.15054786034509,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03439130709924,51.15016773218935,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03436464509093,51.15011378957238,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434841139487,51.150238375861,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434163059315,51.15024943512032,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435847818707,51.15027466188387,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03458330820953,51.1505593632021,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03433447194341,51.15022781427746,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03462963039578,51.14972080038163,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03433702135445,51.15024430494776,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03433268981298,51.1502183501925,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03487128783189,51.150686790739414,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435657186802,51.150203487366674,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434275879677,51.15017939960742,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03424920519655,51.15008110406672,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03446876743892,51.150502523098616,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0341879993778,51.15030585624862,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434653289096,51.15025146583591,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.034352866683,51.15025961972765,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435487768972,51.15027745128325,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435431212866,51.15028798378803,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0343609983921,51.15027793116049,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03436396801406,51.15027203449105,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435937201819,51.150276501973586,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0343578289207,51.15029047311172,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435399156234,51.150276002891125,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03433859207676,51.15025489706128,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0343961084443,51.15012618510156,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03433818272859,51.150251122582794,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03433765392967,51.15025564237863,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0343485103484,51.15025844176232,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03448798459516,51.15010569687119,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03447826737718,51.15053268272484,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03420731886608,51.15007422825806,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03432558700716,51.150240634571716,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434578831592,51.15025963993191,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03448088716392,51.14955507803317,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03414780916454,51.14996872859734,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03411272122608,51.14993095047771,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03437303305881,51.150182841184865,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03433230263062,51.15023491929877,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03413871194942,51.14996501143768,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03428086138868,51.15016997550471,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03428539695491,51.15011197647605,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03420288632539,51.15011884678864,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03421831415649,51.150082235388666,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03420286610142,51.15033063885823,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03422526065592,51.15008321153402,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03412985954569,51.1501549089947,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03431076243803,51.15015046589262,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435611481575,51.15027758294836,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434305179641,51.15026125671066,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435832802137,51.150265346854674,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0343557830908,51.15027048331712,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03439387201483,51.150110979159514,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03426829140217,51.15030164245252,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03454315793928,51.15055852553737,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03439043042788,51.150347671780466,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0343558075822,51.15027400050481,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03436371322377,51.150280673289465,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0344197790812,51.15018034372491,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03437173047213,51.1502099087815,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03423314629917,51.150063940918855,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435401454267,51.150205241799206,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03447358114855,51.15053170149227,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03445517329716,51.150526776106005,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03418303213554,51.15033403841646,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0343425121299,51.15027365349135,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03416945915578,51.15013144416589,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03433497964419,51.150254553566946,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03433473866872,51.150259536912316,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03418619275529,51.150137226486486,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03433363491693,51.15024782053104,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03418285754996,51.15011827850139,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03418812096731,51.15011973885586,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03419021243226,51.15007316045833,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03419225662266,51.1502037345613,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03432523339978,51.15011577152976,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03421478673037,51.15026931417463,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0342253922107,51.15030349748254,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.034166053841,51.15003177248897,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03463001835352,51.15055672247255,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0347019285831,51.15057929225368,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03433461237556,51.1502401548584,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03433178171672,51.15024587566068,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03433632401747,51.15024686379387,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435379473947,51.15029374127646,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434025609778,51.15026356444175,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03400367053693,51.14976849128551,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0342472079961,51.150058119298855,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435218061048,51.15026025876321,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03437982079619,51.15035534219409,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03436017283148,51.150302733833605,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03474308279962,51.15054938905145,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03429650319833,51.15012482919474,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435360044709,51.15028213248977,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435079039747,51.150282181433724,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435495103152,51.150284804858735,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435166502668,51.150272613885235,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03397146984783,51.15010941320809,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03406134554476,51.15069434206987,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435279599353,51.15027791761104,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435716941733,51.1502834841892,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435767345107,51.150292616343506,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03433413522514,51.15013993879471,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03424915611755,51.14990380388823,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03456450385352,51.15057102988095,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0343540942732,51.15028088726969,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434560767099,51.15026266982705,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0343416519758,51.15026052042273,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03442809122284,51.15011871236573,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434613882182,51.15027287183665,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03433887968602,51.1502584680792,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434541450757,51.15027427980599,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0343448586021,51.150264264749445,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434704460942,51.150275645570574,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434647387354,51.15027611581846,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0343572882662,51.150279794406906,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03433733443919,51.150270579923315,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435388823904,51.15026930896941,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435186613656,51.150282482935395,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03436641122445,51.15025012518611,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03450021273912,51.150540562517556,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03450134118319,51.15053633385468,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03447539980502,51.150524653726066,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435190507584,51.15028361362173,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0343186714485,51.15004639570097,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03423879785264,51.15030402654929,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434133259091,51.15026466817699,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434624675022,51.15025711931259,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03436442796934,51.15028627017778,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435335061897,51.15028750024003,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03457159110447,51.150577633219505,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03455303025714,51.15055210355769,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435008240332,51.15025939113106,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434314640901,51.15028098153575,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435454699613,51.150303225683686,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.034625148924,51.15059637141213,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0343447327853,51.15027502036405,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03455180608687,51.14944555579787,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03420147788874,51.15035766974822,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03415787507672,51.1500772674641,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03416408516306,51.150109600071886,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03405176989419,51.1499220991812,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434411740821,51.15028212536039,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0341960919846,51.1500095594029,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434705626803,51.150275605824255,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0341807425612,51.150121151027186,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435011214006,51.15028520000912,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434113105905,51.15024617210669,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03472420856505,51.15062241676423,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434630929553,51.15027455187044,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03422435970938,51.15024013072091,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.0343382438231,51.15025940706115,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435187096835,51.15027783104441,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03412709165065,51.150032920294876,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03413398171011,51.150147055608,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03411019215747,51.15008834341742,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03434844028294,51.15027729363772,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03435473492877,51.15027351067736,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#blueDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03420173002961,51.15003496834673,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>RoverPositions</name>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#redDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03459683718518,51.15022895036076,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#redDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03555300216065,51.14885906093792,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#redDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03382342272796,51.150298040451844,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#redDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03287231259094,51.150740834860216,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>0 </name>
+        <description> </description>
+        <visibility>0</visibility>
+        <styleUrl>#redDotIcon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>
+            -114.03389319487411,51.1495872048098,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Style id="yellowDotIcon">
+      <IconStyle>
+        <color>
+          ffffff00
+        </color>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+        </Icon>      </IconStyle>
+    </Style>
+    <Style id="redCircleIcon">
+      <IconStyle>
+        <color>
+          FF1400F0
+        </color>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+        </Icon>      </IconStyle>
+    </Style>
+    <Style id="redDotIcon">
+      <IconStyle>
+        <color>
+          FF1400F0
+        </color>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+        </Icon>      </IconStyle>
+    </Style>
+    <Style id="blueDotIcon">
+      <IconStyle>
+        <color>
+          ffff0000
+        </color>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+        </Icon>      </IconStyle>
+    </Style>
+    <Style id="yellowLinGreenPoly">
+      <LineStyle>
+        <color>7f00ffff</color>
+        <width>4</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7f00ff00</color>
+      </PolyStyle>
+    </Style>
+  </Document>
+</kml>
